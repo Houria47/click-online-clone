@@ -10,8 +10,8 @@ export type ContextValue = {
 
 const LocaleContext = createContext<ContextValue>({
   currentLanguage: DefaultLanguage,
-  t: (key: string, namespace?: Namespaces) => key,
-  changeLanguage: (language: SupportedLanguages) => {},
+  t: () => "",
+  changeLanguage: () => {},
 });
 
 export default LocaleContext;
