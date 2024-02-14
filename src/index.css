@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    /* rules */
+    font-family: "Cairo", sans-serif;
+    scroll-behavior: smooth;
+    /* vars */
+    --accent-rgb: 255 117 23; /* #FF7517 */
+    --forground-rgb: 44 39 39; /* #2c2727 */
+
+    --nav-h: 88px;
+  }
+  ::selection {
+    @apply bg-accent text-foreground;
+  }
+}
+
+@layer components {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+  .absolute-full {
+    @apply absolute w-full  h-full top-0 left-0;
+  }
+  .btn {
+    @apply rounded-md hover:brightness-105 duration-300 px-4 py-2 md:px-5 md:py-2;
+  }
+  .main-shadow {
+    @apply shadow-[2px_2px_10px_0px_theme(colors.foreground)];
+  }
+  /* Background Images */
+  .main-section-bg {
+    background-image: linear-gradient(to left, #141313dc, #141313dc),
+      url(./assets/main-section.jpg);
+  }
+  .second-bg {
+    background-image: linear-gradient(to left, #141313dc, #141313dc),
+      url(./assets/values-section.jpg);
+  }
+}
